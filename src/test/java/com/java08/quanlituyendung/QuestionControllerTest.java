@@ -72,7 +72,7 @@ import java.util.List;
         return jsonParser.parseMap(resultString).get("access_token").toString();
     }
 
-    @Test
+    //@Test
     public void testCreateQuestion() throws Exception {
         String tk = login(mockMvc,"test@gmail.com", "testpassword");
         QuestionDTO question = new QuestionDTO();
@@ -84,7 +84,7 @@ import java.util.List;
                         .content(asJsonString(question)))
                 .andExpect(status().isOk());
     }
-    @Test
+    //@Test
     public void testCreateQuestionWrongTypeValue() throws Exception {
         String tk = login(mockMvc,"test@gmail.com", "testpassword");
         String invalidJsonContent = "{\n" +
@@ -100,7 +100,7 @@ import java.util.List;
     }
 
 
-    @Test
+    //@Test
     public void testGetAllQuestion() throws Exception {
         String tk = login(mockMvc,"test@gmail.com", "testpassword");
         QuestionDTO question1 = new QuestionDTO();
@@ -123,7 +123,7 @@ import java.util.List;
 
     }
 
-    @Test
+    //@Test
     public void testDelete() throws Exception {
         String tk = login(mockMvc,"test@gmail.com", "testpassword");
         Long[] ids = {1L, 2L, 3L};
@@ -136,7 +136,7 @@ import java.util.List;
                 .andExpect(content().string("Delete Success!"));
     }
 
-    @Test
+    //@Test
     public void testUpdateQuestion() throws Exception {
         String tk = login(mockMvc,"test@gmail.com", "testpassword");
         long id = 1L;

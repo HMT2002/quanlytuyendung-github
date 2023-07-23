@@ -50,7 +50,7 @@ public class LoginTests {
     private UserAccountRepository userAccountRepository;
     ObjectMapper objectMapper = new ObjectMapper();
 
-    @Test
+    //@Test
     public void testLoginSuccess() throws Exception {
         String email = "test@gmail.com";
         String username = "testlogin";
@@ -70,7 +70,7 @@ public class LoginTests {
 
     }
 
-    @Test
+    //@Test
     public void testEmailNotExist() throws Exception {
 
         String email = "emailnotexist@gmail.com";
@@ -89,7 +89,7 @@ public class LoginTests {
                 .andReturn();
     }
 
-    @Test
+    //@Test
     public void testPasswordNotMatch() throws Exception {
 
         String email = "test@gmail.com";

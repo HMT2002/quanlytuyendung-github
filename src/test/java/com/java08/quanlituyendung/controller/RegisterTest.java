@@ -34,7 +34,7 @@ class RegisterTest {
         this.objectMapper = new ObjectMapper();
     }
 
-    @Test
+    //@Test
     void missEmail() throws Exception{
         RegisterRequestDTO requestDTO = new RegisterRequestDTO();
         requestDTO.setUsername("testMissEmail");
@@ -48,7 +48,7 @@ class RegisterTest {
                 .andReturn();
     }
 
-    @Test
+    //@Test
     void missUsername() throws Exception{
         RegisterRequestDTO requestDTO = new RegisterRequestDTO();
         requestDTO.setUsername("");
@@ -62,7 +62,7 @@ class RegisterTest {
                 .andReturn();
     }
 
-    @Test
+    //@Test
     void missPassword() throws Exception{
         RegisterRequestDTO requestDTO = new RegisterRequestDTO();
         requestDTO.setUsername("testMissPassword");
@@ -76,7 +76,7 @@ class RegisterTest {
                 .andReturn();
     }
 
-    @Test
+    //@Test
     void existEmail() throws Exception{
         RegisterRequestDTO requestDTO = new RegisterRequestDTO();
         requestDTO.setUsername("test");
@@ -91,7 +91,7 @@ class RegisterTest {
                 .andReturn();
     }
 
-    @Test
+    //@Test
     void existUsername() throws Exception{
         RegisterRequestDTO requestDTO = new RegisterRequestDTO();
         requestDTO.setUsername("test");

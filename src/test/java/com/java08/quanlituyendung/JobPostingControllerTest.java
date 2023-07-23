@@ -67,7 +67,7 @@
 //        return jsonParser.parseMap(resultString).get("access_token").toString();
 //    }
 //
-//    @Test
+//    //@Test
 //    public void testGetAllJobPosting() throws Exception {
 //        String tk = login(mockMvc,"test@gmail.com", "testpassword");
 //        List<JobPostingDTO> jobPostingList = new ArrayList<>();
@@ -78,7 +78,7 @@
 //                .andExpect((ResultMatcher) jsonPath("$", hasSize(jobPostingList.size())));
 //    }
 //
-//    @Test
+//    //@Test
 //    public void testCreateJobPosting() throws Exception {
 //        String tk = login(mockMvc,"test@gmail.com", "testpassword");
 //        JobPostingDTO jobPostingDTO = new JobPostingDTO();
@@ -97,7 +97,7 @@
 //        assertEquals(jobPostingDTO, responseDTO);
 //    }
 //
-//    @Test
+//    //@Test
 //    public void testUpdateJobPosting() throws Exception {
 //        String tk = login(mockMvc,"test@gmail.com", "testpassword");
 //        Long jobPostingId = 100L;
@@ -112,7 +112,7 @@
 //                .andExpect((ResultMatcher) jsonPath("$.id", equalTo(jobPostingId.intValue())));
 //    }
 //
-//    @Test
+//    //@Test
 //    public void testGetAllJobPosting_ReturnsJobPostingList() throws Exception {
 //        String tk = login(mockMvc,"test@gmail.com", "testpassword");
 //        List<JobPostingDTO> jobPostingList = new ArrayList<>();
@@ -141,7 +141,7 @@
 //        assertEquals("Job 2", responseList.get(1).getDescription());
 //    }
 //
-//    @Test
+//    //@Test
 //    public void testDeleteJobPosting() throws Exception {
 //        String tk = login(mockMvc,"test@gmail.com", "testpassword");
 //        Long[] idArray = new Long[]{1L, 2L, 3L};

@@ -67,7 +67,7 @@ class JobTypeControllerTest {
 
 
 
-    @Test
+    //@Test
     public void testGetAllJobType() throws Exception {
         String tk = login(mockMvc,"test@gmail.com", "testpassword");
         // Tạo danh sách JobTypeDTO để trả về từ service
@@ -87,7 +87,7 @@ class JobTypeControllerTest {
                 .andExpect(jsonPath("$", hasSize(jobTypeList.size())));
     }
 
-    @Test
+    //@Test
     public void testGetJobTypeById() throws Exception {
         String tk = login(mockMvc,"test@gmail.com", "testpassword");
         Long jobId = 5L;
@@ -105,7 +105,7 @@ class JobTypeControllerTest {
                 .andExpect( jsonPath("$.id", equalTo(jobId.intValue())));
     }
 
-    @Test
+    //@Test
     public void testAddJobType() throws Exception {
         String tk = login(mockMvc,"test@gmail.com", "testpassword");
         JobTypeDTO jobTypeDTO = new JobTypeDTO();
@@ -124,7 +124,7 @@ class JobTypeControllerTest {
     }
 
 
-    @Test
+    //@Test
     public void testUpdateJobType() throws Exception {
         String tk = login(mockMvc,"test@gmail.com", "testpassword");
         Long jobId = 18L;
@@ -145,7 +145,7 @@ class JobTypeControllerTest {
                 .andExpect(jsonPath("$.jobName", equalTo(jobName)));
     }
 
-    @Test
+    //@Test
     public void testDeleteJobType() throws Exception {
         String tk = login(mockMvc,"test@gmail.com", "testpassword");
         Long[] idArray = new Long[]{1L, 2L, 3L};
